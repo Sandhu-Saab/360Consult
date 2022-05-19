@@ -1,0 +1,617 @@
+{% load static %}
+
+<head>
+    <meta name="csrf_token" content="{{ csrf_token }}">
+
+    <meta charset="utf-8">
+    <title>CONSULT - Consultancy Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' rel='stylesheet' %}"/>
+
+    <!-- Customized Bootstrap Stylesheet -->
+<!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+
+    <!-- Template Stylesheet -->
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+<div>
+    <!-- Topbar Start -->
+    <!-- <div class="container-fluid bg-secondary ps-5 pe-0 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-body py-2 pe-3 border-end" href=""><small>FAQs</small></a>
+                    <a class="text-body py-2 px-3 border-end" href=""><small>Support</small></a>
+                    <a class="text-body py-2 px-3 border-end" href=""><small>Privacy</small></a>
+                    <a class="text-body py-2 px-3 border-end" href=""><small>Policy</small></a>
+                    <a class="text-body py-2 ps-3" href=""><small>Career</small></a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
+                    <div class="me-3 pe-3 border-end py-2">
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@example.com</p>
+                    </div>
+                    <div class="py-2">
+                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0 text-uppercase text-primary"><i class="far fa-smile text-primary me-2"></i>360 consult</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 me-n3">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="okk" class="nav-item nav-link">About</a>
+                <a href="service" class="nav-item nav-link">Service</a>
+                <a href="contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{% static 'media/img/carousel-1.jpg' %}" alt="My image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase">Dispute Property Consultancy</h5>
+                            <h1 class="display-1 text-white mb-md-4">We Provide Solution On Disputed Property</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a>
+                            <a href="" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                     <img class="w-100" src="{% static 'media/img/carousel-2.jpg' %}" alt="Image" >
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase">Dispute Property Consultancy</h5>
+                            <h1 class="display-1 text-white mb-md-4">Take Our Help To Sovle your Problems</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a>
+                            <a href="" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid bg-secondary p-0">
+        <div class="row g-0">
+            <div class="col-lg-6 py-6 px-5">
+                <h1 class="display-5 mb-4">Welcome To <span class="text-primary">360 CONSULT</span></h1>
+                <h4 class="text-primary mb-4">We will try to give you over 100% to Solve your problem</h4>
+                <p class="mb-4">We are one of the renowned organizations, involved in offering Land Dispute Cases. Our organization has knowledgeable team who has affluent acquaintance of this industry. To complete this service, we use advanced techniques and creative ideas. In addition, we offer this service to our patrons at low prices.</p>
+                <a href="" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Get A Quote</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="h-100 d-flex flex-column justify-content-center bg-primary p-5">
+                    <div class="d-flex text-white mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-user-tie fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Dispute Property Consult</h3>
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem sit clita duo</p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-chart-line fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Legal Advisor</h3>
+                            <p class="mb-0">Providing advice on legal matters. Drafting legal opinions, memoranda, and briefing documents. Reviewing legal material.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-balance-scale fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Other Property</h3>
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem sit clita duo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 mb-0">What We Offer</h1>
+            <hr class="w-25 mx-auto bg-primary">
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-user-tie fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">What is Dispute Property</h3>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-chart-pie fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">How to Sell Dispute Property</h3>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-chart-line fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">How to Buy Dispute Property</h3>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-chart-area fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Settlement</h3>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-balance-scale fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Litigation</h3>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-house-damage fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Property Disputes Among Brothers</h3>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-house-damage fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Loan on Dispute Property</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-house-damage fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Recovery of arrears</h3>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-house-damage fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Shared acces</h3>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-house-damage fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Boundary Dispute</h3>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-house-damage fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Neighbour Dispute</h3>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-house-damage fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Fence Dispute</h3>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" style="height: 100%; width:50%;">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 50px; height: 50px;">
+                        <i class="fa fa-house-damage fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Breach of lease</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid py-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 mb-0">Why Choose Us!!!</h1>
+            <hr class="w-25 mx-auto bg-primary">
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-cubes fs-4 text-white"></i>
+                        </div>
+                        <h3>Best In Dispute Property Advice</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-percent fs-4 text-white"></i>
+                        </div>
+                        <h3>99% Success Rate</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div>
+                    <!-- <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-award fs-4 text-white"></i>
+                        </div>
+                        <h3>Award Winning</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div> -->
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-headset fs-4 text-white"></i>
+                        </div>
+                        <h3>24/7 Customer Support</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-block bg-primary h-100 text-center">
+                    <img class="img-fluid" src="{% static 'media/img/feature.jpg' %}"/>
+
+                    <div class="p-4">
+                        <p class="text-white mb-4">Clita nonumy sanctus nonumy et clita tempor, et sea amet ut et sadipscing rebum amet takimata amet, sed accusam eos eos dolores dolore et. Et ea ea dolor rebum invidunt clita eos. Sea accusam stet stet ipsum, sit ipsum et ipsum kasd</p>
+                        <a href="" class="btn btn-light py-md-3 px-md-5 rounded-pill mb-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="far fa-smile-beam fs-4 text-white"></i>
+                        </div>
+                        <h3>100% Happy Client</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-user-tie fs-4 text-white"></i>
+                        </div>
+                        <h3>Professional Advisors</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div>
+                    <!-- <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-headset fs-4 text-white"></i>
+                        </div>
+                        <h3>24/7 Customer Support</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+
+
+    <!-- Quote Start -->
+    <div class="container-fluid bg-secondary px-0">
+        <div class="row g-0">
+            <div class="col-lg-6 py-6 px-5">
+                <h1 class="display-5 mb-4">Consult me</h1>
+                <p class="mb-4">if you have any problem regarding property, or you want to discuss about Dispute property, or any other problem related to property then you can fill this form and then we will call you back to discuss about that topic.</p>
+
+                <form class="" method="post">
+                      {% csrf_token %}
+
+                    <div class="row gx-3">
+                        <div class="col-6">
+                            <div class="form-floating">
+                                <input type="text" id="name" class="form-control" placeholder="John Doe" name="name">
+                                <label for="name">Full Name</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com">
+                                <label for="email">Email address</label>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input name="phone" type="tel" class="form-control" id="phone" placeholder="7508078214">
+                                <label for="phone">Phone number</label>
+                            </div>
+                        </div>
+                        <!-- <div class="col-12">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="form-floating-2" placeholder="Your problem">
+                                <label for="form-floating-4">Write something about your problem</label>
+                            </div>
+                        </div> -->
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea name="msg" class="form-control" placeholder="Message" id="msg" style="height: 150px"></textarea>
+                                <label for="msg">Write something about your problem</label><br>
+                              </div>
+                        </div><br>
+
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Request to call back</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="{% static 'media/img/quote.jpg' style='object-fit: cover;' %}"/>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-secondary p-0">
+        <div class="row g-0">
+            <div class="col-lg-6" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="{% static 'media/img/testimonial.jpg' style='object-fit: cover;' %}"/>
+
+                </div>
+            </div>
+            <div class="col-lg-6 py-6 px-5">
+                <h1 class="display-5 mb-4">What Say Our Client!!!</h1>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item">
+                        <p class="fs-4 fw-normal mb-4"><i class="fa fa-quote-left text-primary me-3"></i>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat dolor rebum sit ipsum.</p>
+                        <div class="d-flex align-items-center">
+                           <img class="img-fluid rounded-circle" src="{% static 'media/img/testimonial-1.jpg' %}"/>
+
+                            <div class="ps-4">
+                                <h3>Client Name</h3>
+                                <span class="text-uppercase">Profession</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <p class="fs-4 fw-normal mb-4"><i class="fa fa-quote-left text-primary me-3"></i>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat dolor rebum sit ipsum.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid rounded-circle" src="{% static 'media/img/testimonial-2.jpg' %}" />
+                            <div class="ps-4">
+                                <h3>Client Name</h3>
+                                <span class="text-uppercase">Profession</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+<!--    <div class="container-fluid py-6 px-5">-->
+<!--        <div class="text-center mx-auto mb-5" style="max-width: 600px;">-->
+<!--            <h1 class="display-5 mb-0">Latest Blog Post</h1>-->
+<!--            <hr class="w-25 mx-auto bg-primary">-->
+<!--        </div>-->
+<!--        <div class="row g-5">-->
+<!--            <div class="col-lg-4">-->
+<!--                <div class="blog-item">-->
+<!--                    <div class="position-relative overflow-hidden">-->
+<!--                        <img class="img-fluid" src="img/blog-1.jpg" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="bg-secondary d-flex">-->
+<!--                        <div class="flex-shrink-0 d-flex flex-column justify-content-center text-center bg-primary text-white px-4">-->
+<!--                            <span>01</span>-->
+<!--                            <h5 class="text-uppercase m-0">Jan</h5>-->
+<!--                            <span>2045</span>-->
+<!--                        </div>-->
+<!--                        <div class="d-flex flex-column justify-content-center py-3 px-4">-->
+<!--                            <div class="d-flex mb-2">-->
+<!--                                <small class="text-uppercase me-3"><i class="bi bi-person me-2"></i>Admin</small>-->
+<!--                                <small class="text-uppercase me-3"><i class="bi bi-bookmarks me-2"></i>Web Design</small>-->
+<!--                            </div>-->
+<!--                            <a class="h4" href="">Magna sea dolor ipsum amet lorem eos</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-4">-->
+<!--                <div class="blog-item">-->
+<!--                    <div class="position-relative overflow-hidden">-->
+<!--                        <img class="img-fluid" src="img/blog-2.jpg" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="bg-secondary d-flex">-->
+<!--                        <div class="flex-shrink-0 d-flex flex-column justify-content-center text-center bg-primary text-white px-4">-->
+<!--                            <span>01</span>-->
+<!--                            <h5 class="text-uppercase m-0">Jan</h5>-->
+<!--                            <span>2045</span>-->
+<!--                        </div>-->
+<!--                        <div class="d-flex flex-column justify-content-center py-3 px-4">-->
+<!--                            <div class="d-flex mb-2">-->
+<!--                                <small class="text-uppercase me-3"><i class="bi bi-person me-2"></i>Admin</small>-->
+<!--                                <small class="text-uppercase me-3"><i class="bi bi-bookmarks me-2"></i>Web Design</small>-->
+<!--                            </div>-->
+<!--                            <a class="h4" href="">Magna sea dolor ipsum amet lorem eos</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-4">-->
+<!--                <div class="blog-item">-->
+<!--                    <div class="position-relative overflow-hidden">-->
+<!--                        <img class="img-fluid" src="img/blog-3.jpg" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="bg-secondary d-flex">-->
+<!--                        <div class="flex-shrink-0 d-flex flex-column justify-content-center text-center bg-primary text-white px-4">-->
+<!--                            <span>01</span>-->
+<!--                            <h5 class="text-uppercase m-0">Jan</h5>-->
+<!--                            <span>2045</span>-->
+<!--                        </div>-->
+<!--                        <div class="d-flex flex-column justify-content-center py-3 px-4">-->
+<!--                            <div class="d-flex mb-2">-->
+<!--                                <small class="text-uppercase me-3"><i class="bi bi-person me-2"></i>Admin</small>-->
+<!--                                <small class="text-uppercase me-3"><i class="bi bi-bookmarks me-2"></i>Web Design</small>-->
+<!--                            </div>-->
+<!--                            <a class="h4" href="">Magna sea dolor ipsum amet lorem eos</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!-- Blog End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-secondary p-5">
+        <div class="row g-5">
+            <div class="col-12 text-center">
+                <h1 class="display-5 mb-4">Short Advice call.</h1>
+                <form class="mx-auto" style="max-width: 600px;">
+                    <div class="form-group">
+                        <input type="text" class="form-control border-white p-3" placeholder="Your Email"><br>
+                        <input type="tel" class="form-control border-white p-3" placeholder="Your Phone no."><br>
+                        <button class="btn btn-dark px-4">Contect us</button>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-secondary p-5">
+        <div class="row g-5">
+          <div class="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.141727146461!2d77.14172391492534!3d28.71531018238522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03d8c2390297%3A0xcce8cfe97f693078!2s360%20Digital%20Transformation!5e0!3m2!1sen!2sin!4v1652695817287!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Popular Links</h3>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                    <a class="text-secondary mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                    <a class="text-secondary mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
+
+                    <a class="text-secondary" href="contect.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Get In Touch</h3>
+                <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>14C,Block ED,Pitampura,New Delhi-34</p>
+                <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
+                <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="#">360 Consult</a>. All Rights Reserved. Designed by <a class="text-secondary border-bottom" href="https://360digitaltransformation.com/">360 Digital Transformation</a></p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+</div>
+</body>
