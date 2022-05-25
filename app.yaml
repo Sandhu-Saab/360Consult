@@ -1,0 +1,79 @@
+runtime: django
+threadsafe: yes
+api_version: 1
+
+inbound_services:
+# [START mail_service]
+- mail
+# [END mail_service]
+# [START bounce_service]
+- mail_bounce
+# [END bounce_service]
+
+runtime_config:
+  document_root: web
+
+
+handlers:
+- url: /
+  script: /index.html
+
+- url: /index.html
+  script: index.html
+
+- url: /home.html
+  script: home.html
+
+- url: /okk.html
+  script: okk.html
+
+- url: /service.html
+  script: service.html
+
+- url: /contact.html
+  script: contact.html
+
+- url: /(.*)\.html$
+  static_files: /\1.html
+  upload: /*\.html$
+
+- url: /contact-process.php
+  script: contact-process.php
+
+- url: /join_us.php
+  script: join_us.php
+
+- url: /robots.txt
+  script: robots.txt
+
+- url: /webfonts
+  static_dir: webfonts
+
+- url: static/css
+  static_dir: css
+
+- url: static/media/img
+  static_dir: img
+
+- url: static/js
+  static_dir: js
+
+
+# - url: /vendor/phpmailer/phpmailer/src/Exception.php
+#   script: vendor/phpmailer/phpmailer/src/Exception.php
+
+# - url: /vendor/phpmailer/phpmailer/src/PHPMailer.php
+#   script: vendor/phpmailer/phpmailer/src/PHPMailer.php
+
+# - url: /vendor/phpmailer/phpmailer/src/SMTP.php
+#   script: vendor/phpmailer/phpmailer/src/SMTP.php
+
+# - url: /composer.json
+#   script: composer.json
+
+# - url: /composer.lock
+#   script: composer.lock
+
+- url: /(.*\.(gif|png|jpg))$
+  static_files: static/\1
+  upload: static/.*\.(gif|png|jpg)$

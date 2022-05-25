@@ -32,6 +32,8 @@ def okk(request):
 def service(request):
     return render(request, "service.html")
 
+def home(request):
+    return render(request, "home.html")
 
 def contact(request):
     if request.method == 'POST':

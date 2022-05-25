@@ -9,6 +9,7 @@ urlpatterns = [
     # path("okk", views.okk),
     path(r"okk", views.okk, name='okk'),
     path("service", views.service, name="service"),
-    path("contact", views.contact, name="contact")
+    path("contact", views.contact, name="contact"),
+    path("home", views.home, name="home")
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
